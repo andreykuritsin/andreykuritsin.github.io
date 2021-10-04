@@ -3,15 +3,15 @@
     "apps": [],
     "details": [
       {
-        "appID": "QED4VVPZWA.com.mevo.application”,
+        "appID": "QED4VVPZWA.com.mevo.application",
         "paths": [
-          “mevo/configure/app“
+          "mevo/configure/app"
         ]
       },
 	  {
-        "appID": "QED4VVPZWA.com.mevo.multicam”,
+        "appID": "QED4VVPZWA.com.mevo.multicam",
         "paths": [
-          “mevo/configure/multicam“
+          "mevo/configure/multicam"
         ]
       }
     ]
