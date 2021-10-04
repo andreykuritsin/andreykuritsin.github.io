@@ -13,7 +13,7 @@
 					"publishHost": "*",
 					"publishStream": "*",
 					"publishPort": "*",
-					"publishProtocol": " * ",
+					"publishProtocol": "*",
 					"publishApplication": "*"
 				}
 			}]
