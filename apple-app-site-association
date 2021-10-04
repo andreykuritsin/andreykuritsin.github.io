@@ -1,37 +1,22 @@
 {
-  "applinks": {
-    "apps": [],
-    "details": [
-      {
-        "appIDs": ["QED4VVPZWA.com.mevo.application", "776EQJ8ZBM.com.mevo.enterprise.application"],
-        "components": [	
-	  {
-             "/": "/mevo/configure/app/",
-	     "?": { 
-		"publishHost"	    : "*",
-		"publishStream"	    : "*",
-		"publishPort"	    : "*",
-		"publishProtocol     : "*",
-		"publishApplication" : "*"
-	     }
-          }
-	]
-      }, 
-      {
-        "appIDs": ["QED4VVPZWA.com.mevo.multicam", "776EQJ8ZBM.com.mevo.enterprise.multicam"],
-        "components": [	
-	  {
-             "/": "/mevo/configure/multicam/",
-	     "?": { 
-		"publishHost"	    : "*",
-		"publishStream"	    : "*",
-		"publishPort"	    : "*",
-		"publishProtocol     : "*",
-		"publishApplication" : "*"
-	     }
-          }
-        ]
-      }
-    ]
-  }
+	"applinks": {
+		"apps": [],
+		"details": [{
+			"appIDs": ["QED4VVPZWA.com.mevo.application",
+				"776EQJ8ZBM.com.mevo.enterprise.application",
+				"QED4VVPZWA.com.mevo.multicam",
+				"776EQJ8ZBM.com.mevo.enterprise.multicam"
+			],
+			"components": [{
+				"/": "/mevo/configure/",
+				"?": {
+					"publishHost": "*",
+					"publishStream": "*",
+					"publishPort": "*",
+					"publishProtocol": " * ",
+					"publishApplication": "*"
+				}
+			}]
+		}]
+	}
 }
