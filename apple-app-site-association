@@ -4,27 +4,19 @@
     "details": [
       {
         "appID": "QED4VVPZWA.com.mevo.application",
-        "paths": [
-          "/mevo/configure/app"
-        ]
+        "paths": ["/mevo/configure/app/"]
       }, 
       {
         "appID": "776EQJ8ZBM.com.mevo.enterprise.application",
-        "paths": [
-          "/mevo/configure/app"
-        ]
+        "paths": ["/mevo/configure/app/"]
       },
       {
         "appID": "QED4VVPZWA.com.mevo.multicam",
-        "paths": [
-          "/mevo/configure/multicam"
-        ]
+        "paths": ["/mevo/configure/multicam/"]
       },
       {
         "appID": "776EQJ8ZBM.com.mevo.enterprise.multicam",
-        "paths": [
-          "/mevo/configure/multicam"
-        ]
+        "paths": ["/mevo/configure/multicam/"]
       }
     ]
   }
