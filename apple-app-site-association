@@ -7,13 +7,30 @@
         "components": [	
 	  {
              "/": "/mevo/configure/app/",
-             "comment": "Matches any URL whose path contains /mevo/configure/app/"
+	     "?": { 
+		"publishHost"	    : "*",
+		"publishStream"	    : "*",
+		"publishPort"	    : "*",
+		"publishProtocol     : "*",
+		"publishApplication" : "*"
+	     }
           }
 	]
       }, 
       {
         "appIDs": ["QED4VVPZWA.com.mevo.multicam", "776EQJ8ZBM.com.mevo.enterprise.multicam"],
-        "paths": ["/mevo/configure/multicam/"]
+        "components": [	
+	  {
+             "/": "/mevo/configure/multicam/",
+	     "?": { 
+		"publishHost"	    : "*",
+		"publishStream"	    : "*",
+		"publishPort"	    : "*",
+		"publishProtocol     : "*",
+		"publishApplication" : "*"
+	     }
+          }
+        ]
       }
     ]
   }
