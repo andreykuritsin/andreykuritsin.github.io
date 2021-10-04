@@ -4,11 +4,11 @@
 		"details": [
 		  {
 			"appIDs": ["QED4VVPZWA.com.mevo.application","776EQJ8ZBM.com.mevo.enterprise.application"],
-			"components": [{ "/": "/mevo/configure/app" }]
+			"components": [{ "/": "/mevo/configure/app/" }]
 		  },
 		  {
 			"appIDs": ["QED4VVPZWA.com.mevo.multicam","776EQJ8ZBM.com.mevo.enterprise.multicam"],
-			"components": [{ "/": "/mevo/configure/multicam" }]
+			"components": [{ "/": "/mevo/configure/multicam/ }]
 		  }
 		]
 	}
