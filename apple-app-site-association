@@ -8,7 +8,7 @@
       }, 
       {
         "appID": "776EQJ8ZBM.com.mevo.enterprise.application",
-        "paths": ["*"]
+        "paths": ["/mevo/configure/app/"]
       },
       {
         "appID": "QED4VVPZWA.com.mevo.multicam",
