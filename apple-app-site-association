@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "QED4VVPZWA.com.mevo.application”,
+        "paths": [
+          “mevo/configure/app“
+        ]
+      },
+	  {
+        "appID": "QED4VVPZWA.com.mevo.multicam”,
+        "paths": [
+          “mevo/configure/multicam“
+        ]
+      }
+    ]
+  }
+}
