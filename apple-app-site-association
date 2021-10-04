@@ -3,19 +3,16 @@
     "apps": [],
     "details": [
       {
-        "appID": "QED4VVPZWA.com.mevo.application",
-        "paths": ["/mevo/configure/app/"]
+        "appIDs": ["QED4VVPZWA.com.mevo.application", "776EQJ8ZBM.com.mevo.enterprise.application"],
+        "components": [	
+	  {
+             "/": "/mevo/configure/app/",
+             "comment": "Matches any URL whose path contains /mevo/configure/app/"
+          }
+	]
       }, 
       {
-        "appID": "776EQJ8ZBM.com.mevo.enterprise.application",
-        "paths": ["/mevo/configure/app/"]
-      },
-      {
-        "appID": "QED4VVPZWA.com.mevo.multicam",
-        "paths": ["/mevo/configure/multicam/"]
-      },
-      {
-        "appID": "776EQJ8ZBM.com.mevo.enterprise.multicam",
+        "appIDs": ["QED4VVPZWA.com.mevo.multicam", "776EQJ8ZBM.com.mevo.enterprise.multicam"],
         "paths": ["/mevo/configure/multicam/"]
       }
     ]
