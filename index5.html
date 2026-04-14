@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chessboard 540p Export</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<canvas id="board" width="960" height="540"></canvas>
+
+<script>
+const canvas = document.getElementById("board");
+const ctx = canvas.getContext("2d");
+
+const size = 8;
+const cellW = canvas.width / size;
+const cellH = canvas.height / size;
+
+let startTime = performance.now();
+const duration = 1000;
+
+let colorsA = [];
+let colorsB = [];
+
+function randomColor() {
+  return [
+    Math.random() * 255,
+    Math.random() * 255,
+    Math.random() * 255
+  ];
+}
+
+function lerp(a, b, t) {
+  return a + (b - a) * t;
+}
+
+function lerpColor(c1, c2, t) {
+  return [
+    lerp(c1[0], c2[0], t),
+    lerp(c1[1], c2[1], t),
+    lerp(c1[2], c2[2], t)
+  ];
+}
+
+function initColors() {
+  colorsA = [];
+  colorsB = [];
+  for (let i = 0; i < size * size; i++) {
+    colorsA.push(randomColor());
+    colorsB.push(randomColor());
+  }
+}
+
+function drawBoard(alpha) {
+  let i = 0;
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++, i++) {
+      const c = lerpColor(colorsA[i], colorsB[i], alpha);
+      ctx.fillStyle = `rgb(${c[0] | 0}, ${c[1] | 0}, ${c[2] | 0})`;
+      ctx.fillRect(
+        x * cellW,
+        y * cellH,
+        cellW,
+        cellH
+      );
+    }
+  }
+}
+
+function animate(now) {
+  const t = Math.min((now - startTime) / duration, 1);
+  drawBoard(t);
+
+  if (t >= 1) {
+    startTime = now;
+    colorsA = colorsB;
+    colorsB = [];
+    for (let i = 0; i < size * size; i++) {
+      colorsB.push(randomColor());
+    }
+  }
+
+  requestAnimationFrame(animate);
+}
+
+initColors();
+requestAnimationFrame(animate);
+
+window.exportFrame = function () {
+    const canvas = document.getElementById("board");
+    const ctx = canvas.getContext("2d");
+
+    const w = canvas.width;
+    const h = canvas.height;
+
+    const imageData = ctx.getImageData(0, 0, w, h);
+    const bytes = imageData.data;
+
+    let binary = "";
+    const chunkSize = 0x8000;
+
+    for (let i = 0; i < bytes.length; i += chunkSize) {
+        binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunkSize));
+    }
+
+    return btoa(binary); 
+};
+    
+</script>
+
+</body>
+</html>
